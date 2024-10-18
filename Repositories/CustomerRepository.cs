@@ -37,3 +37,33 @@ public class CustomerRepository : ICustomerRepository
         throw new NotImplementedException();
     }
 }
+
+
+
+public class CustomerPhoneRepository : ICustomerPhoneRepository
+{
+    public void Add(CustomerPhone phone)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Delete(CustomerPhone phone)
+    {
+        throw new NotImplementedException();
+    }
+
+    public List<CustomerPhone> Get(int id)
+    {
+        throw new NotImplementedException();
+    }
+
+    public IEnumerable<CustomerPhone> Get()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Remove(CustomerPhone phone)
+    {
+        throw new NotImplementedException();
+    }
+}

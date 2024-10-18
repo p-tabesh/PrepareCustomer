@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\p.tabesh\\Desktop\\New folder (2)\\AspNETProj.csproj": {}
+    "C:\\Users\\Pooya\\Desktop\\PrepareCustomer-1\\AspNETProj.csproj": {}
   },
   "projects": {
-    "C:\\Users\\p.tabesh\\Desktop\\New folder (2)\\AspNETProj.csproj": {
+    "C:\\Users\\Pooya\\Desktop\\PrepareCustomer-1\\AspNETProj.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\p.tabesh\\Desktop\\New folder (2)\\AspNETProj.csproj",
+        "projectUniqueName": "C:\\Users\\Pooya\\Desktop\\PrepareCustomer-1\\AspNETProj.csproj",
         "projectName": "AspNETProj",
-        "projectPath": "C:\\Users\\p.tabesh\\Desktop\\New folder (2)\\AspNETProj.csproj",
-        "packagesPath": "C:\\Users\\p.tabesh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\p.tabesh\\Desktop\\New folder (2)\\obj\\",
+        "projectPath": "C:\\Users\\Pooya\\Desktop\\PrepareCustomer-1\\AspNETProj.csproj",
+        "packagesPath": "C:\\Users\\Pooya\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Pooya\\Desktop\\PrepareCustomer-1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\p.tabesh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Pooya\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -88,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.108/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

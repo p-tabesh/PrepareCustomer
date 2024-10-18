@@ -40,29 +40,29 @@ public class CustomerRepository : ICustomerRepository
 
 
 
-public class CustomerPhoneRepository : ICustomerPhoneRepository
+public class CustomerPhoneRepository : IPhoneRepository
 {
-    public void Add(CustomerPhone phone)
+    public void Add(Phone phone)
     {
         throw new NotImplementedException();
     }
 
-    public void Delete(CustomerPhone phone)
+    public void Delete(Phone phone)
     {
         throw new NotImplementedException();
     }
 
-    public List<CustomerPhone> Get(int id)
+    public List<Phone> Get(int id)
     {
         throw new NotImplementedException();
     }
 
-    public IEnumerable<CustomerPhone> Get()
+    public IEnumerable<Phone> Get()
     {
         throw new NotImplementedException();
     }
 
-    public void Remove(CustomerPhone phone)
+    public void Remove(Phone phone)
     {
         throw new NotImplementedException();
     }

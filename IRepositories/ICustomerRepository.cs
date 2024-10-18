@@ -14,12 +14,12 @@ public interface ICustomerRepository
 
 
 
-public interface ICustomerPhoneRepository
+public interface IPhoneRepository
 {
-    public List<CustomerPhone> Get(int id);
-    public IEnumerable<CustomerPhone> Get();
-    public void Add(CustomerPhone phone);
+    public List<Phone> Get(int id);
+    public IEnumerable<Phone> Get();
+    public void Add(Phone phone);
     // public void Update(Customer customer, string newPhoneNumber);
-    public void Delete(CustomerPhone phone);
-    public void Remove(CustomerPhone phone);
+    public void Delete(Phone phone);
+    public void Remove(Phone phone);
 }

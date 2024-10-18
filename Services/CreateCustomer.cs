@@ -9,7 +9,7 @@ namespace AspNETProj.Services;
 public class CreateCustomer
 {
     private Customer _customer;
-    private CustomerPhone _customerPhone;
+    private Phone _phone;
     private CustomerPhoneRepository _customerPhoneRepository;
     private CustomerRepository? _customerRepository;
     public CreateCustomer(string nationalCode, string phoneNumber)
@@ -23,13 +23,13 @@ public class CreateCustomer
             throw new Exception("phone must have value");
         }
         _customer = new Customer(nationalCode);
-        _customerPhone = new CustomerPhone(phoneNumber, _customer);
+        _phone = new Phone(phoneNumber, _customer);
         try
         {
             var customerRepo = _customerRepository;
             customerRepo.Add(_customer);
             var phoneRepo = _customerPhoneRepository;
-            phoneRepo.Add(_customerPhone);
+            phoneRepo.Add(_phone);
         }
         catch (Exception e)
         {

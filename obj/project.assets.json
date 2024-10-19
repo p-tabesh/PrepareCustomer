@@ -938,7 +938,7 @@
           "build/Swashbuckle.AspNetCore.props": {}
         }
       },
-      "Swashbuckle.AspNetCore.Swagger/6.8.1": {
+      "Swashbuckle.AspNetCore.Swagger/6.9.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.OpenApi": "1.6.14"
@@ -957,10 +957,10 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Swashbuckle.AspNetCore.SwaggerGen/6.8.1": {
+      "Swashbuckle.AspNetCore.SwaggerGen/6.9.0": {
         "type": "package",
         "dependencies": {
-          "Swashbuckle.AspNetCore.Swagger": "6.8.1"
+          "Swashbuckle.AspNetCore.Swagger": "6.9.0"
         },
         "compile": {
           "lib/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
@@ -973,7 +973,7 @@
           }
         }
       },
-      "Swashbuckle.AspNetCore.SwaggerUI/6.8.1": {
+      "Swashbuckle.AspNetCore.SwaggerUI/6.9.0": {
         "type": "package",
         "compile": {
           "lib/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
@@ -3301,10 +3301,10 @@
         "swashbuckle.aspnetcore.nuspec"
       ]
     },
-    "Swashbuckle.AspNetCore.Swagger/6.8.1": {
-      "sha512": "eOkdM4bsWBU5Ty3kWbyq5O9L+05kZT0vOdGh4a92vIb/LLQGQTPLRHXuJdnUBNIPNC8XfKWfSbtRfqzI6nnbqw==",
+    "Swashbuckle.AspNetCore.Swagger/6.9.0": {
+      "sha512": "P316kpxx5DnDvJwNWW8iTAXkh9DVenAxFGe9v4OUS0gil+vitH7F1feXhCtVeHN/616EFNTMh4pV2lcr9kkw/w==",
       "type": "package",
-      "path": "swashbuckle.aspnetcore.swagger/6.8.1",
+      "path": "swashbuckle.aspnetcore.swagger/6.9.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3327,14 +3327,14 @@
         "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.pdb",
         "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.xml",
         "package-readme.md",
-        "swashbuckle.aspnetcore.swagger.6.8.1.nupkg.sha512",
+        "swashbuckle.aspnetcore.swagger.6.9.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swagger.nuspec"
       ]
     },
-    "Swashbuckle.AspNetCore.SwaggerGen/6.8.1": {
-      "sha512": "TjBPxsN0HeJzxEXZYeDXBNNMSyhg+TYXtkbwX+Cn8GH/y5ZeoB/chw0p71kRo5tR2sNshbKwL24T6f9pTF9PHg==",
+    "Swashbuckle.AspNetCore.SwaggerGen/6.9.0": {
+      "sha512": "FjeMR3fBzwVc5plfYjoHw9ptf8SOWMupvO9X35J5EgzT3L9dRqSxa+cBKzL8PwCyemY0xNrggQSB5+MFWx1axg==",
       "type": "package",
-      "path": "swashbuckle.aspnetcore.swaggergen/6.8.1",
+      "path": "swashbuckle.aspnetcore.swaggergen/6.9.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3357,14 +3357,14 @@
         "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
         "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
         "package-readme.md",
-        "swashbuckle.aspnetcore.swaggergen.6.8.1.nupkg.sha512",
+        "swashbuckle.aspnetcore.swaggergen.6.9.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggergen.nuspec"
       ]
     },
-    "Swashbuckle.AspNetCore.SwaggerUI/6.8.1": {
-      "sha512": "lpEszYJ7vZaTTE5Dp8MrsbSHrgDfjhDMjzW1qOA1Xs1Dnj3ZRBJAcPZUTsa5Bva+nLaw91JJ8OI8FkSg8hhIyA==",
+    "Swashbuckle.AspNetCore.SwaggerUI/6.9.0": {
+      "sha512": "0OxlWBFLl2gUESZX/K7QCTz9KctKy0VxHTvLIBcyWGD4z/fv5MCMW02qzYGcReLJr4yBnNDRzApKtLh6oBpe9A==",
       "type": "package",
-      "path": "swashbuckle.aspnetcore.swaggerui/6.8.1",
+      "path": "swashbuckle.aspnetcore.swaggerui/6.9.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3387,7 +3387,7 @@
         "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.pdb",
         "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
         "package-readme.md",
-        "swashbuckle.aspnetcore.swaggerui.6.8.1.nupkg.sha512",
+        "swashbuckle.aspnetcore.swaggerui.6.9.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
     },
@@ -4513,28 +4513,32 @@
       "Microsoft.EntityFrameworkCore.Design >= 8.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.10",
-      "Swashbuckle.AspNetCore >= 6.8.1"
+      "Swashbuckle.AspNetCore >= 6.8.1",
+      "Swashbuckle.AspNetCore.SwaggerGen >= 6.9.0",
+      "Swashbuckle.AspNetCore.SwaggerUI >= 6.9.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Pooya\\.nuget\\packages\\": {}
+    "C:\\Users\\p.tabesh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pooya\\Desktop\\PrepareCustomer-1\\AspNETProj.csproj",
+      "projectUniqueName": "C:\\Users\\p.tabesh\\Desktop\\PrepareCustomer\\AspNETProj.csproj",
       "projectName": "AspNETProj",
-      "projectPath": "C:\\Users\\Pooya\\Desktop\\PrepareCustomer-1\\AspNETProj.csproj",
-      "packagesPath": "C:\\Users\\Pooya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pooya\\Desktop\\PrepareCustomer-1\\obj\\",
+      "projectPath": "C:\\Users\\p.tabesh\\Desktop\\PrepareCustomer\\AspNETProj.csproj",
+      "packagesPath": "C:\\Users\\p.tabesh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\p.tabesh\\Desktop\\PrepareCustomer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Pooya\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\p.tabesh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4547,11 +4551,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -4585,6 +4584,14 @@
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.8.1, )"
+          },
+          "Swashbuckle.AspNetCore.SwaggerGen": {
+            "target": "Package",
+            "version": "[6.9.0, )"
+          },
+          "Swashbuckle.AspNetCore.SwaggerUI": {
+            "target": "Package",
+            "version": "[6.9.0, )"
           }
         },
         "imports": [
@@ -4606,7 +4613,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.108/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

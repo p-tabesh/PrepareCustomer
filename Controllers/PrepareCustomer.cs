@@ -16,6 +16,7 @@ public class PrepareCustomer: Controller
 {
     [HttpPost]
     [AllowAnonymous]
+    [Route("/api/Register")]
     public IActionResult Register([FromBody] CustomerModel model)
     {
         try
@@ -30,6 +31,7 @@ public class PrepareCustomer: Controller
         
     }
     [HttpGet]
+    [Route("/api/GetCustomer")]
     public IActionResult GetCustomer(int id)
     {
         throw new NotImplementedException();

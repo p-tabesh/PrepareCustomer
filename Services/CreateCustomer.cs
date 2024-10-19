@@ -11,7 +11,7 @@ public class CreateCustomer
     private Customer _customer;
     private Phone _phone;
     private CustomerPhoneRepository _customerPhoneRepository;
-    private CustomerRepository? _customerRepository;
+    private CustomerRepository _customerRepository;
     public CreateCustomer(string nationalCode, string phoneNumber)
     {
         if (String.IsNullOrEmpty(nationalCode) || nationalCode.Length < 10 || nationalCode.Length > 10)

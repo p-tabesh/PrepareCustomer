@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 //using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
 using AspNETProj.DatabaseContext;
+using Microsoft.AspNetCore.Builder;
 
 
 
@@ -17,15 +18,21 @@ builder.Services.AddDbContext<Context>(
 
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+//builder.Services.AddControllersWithViews();
+builder.Services.AddControllers();
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 
 var app = builder.Build();
-
+app.UseSwagger();
+app.UseSwaggerUI();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    app.UseHsts();
+    app.UseHsts();  
 }
 
 

@@ -2,14 +2,21 @@
 using AspNETProj.IRepositories;
 using System.Data.SqlClient;
 using System.Security.Cryptography.X509Certificates;
-
+using AspNETProj.DatabaseContext;
+using Microsoft.EntityFrameworkCore;
 namespace AspNETProj.Repositories;
 
 public class CustomerRepository : ICustomerRepository
 {
+    private readonly Context _context;
+    public CustomerRepository(Context context) 
+    {
+        _context = context;
+    }
     public void Add(Customer customer)
     {
-        throw new NotImplementedException();
+        _context.Customers.Add(customer);
+        _context.SaveChanges();
     }
 
     public void Delete(Customer customer)

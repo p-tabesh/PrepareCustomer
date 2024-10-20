@@ -17,6 +17,7 @@ public class Phone
 
         Value = phoneNumber;
         CustomerId = customer.Id;
+        this.customer = customer;
         CreationDate = DateTime.Now;
     }
     

@@ -8,11 +8,15 @@ namespace AspNETProj.Repositories;
 
 public class CustomerRepository : ICustomerRepository
 {
-
-    Context _context = new Context();
+    private readonly Context _context;
+    public CustomerRepository(Context context) 
+    {
+        _context = context;
+    }
     public void Add(Customer customer)
     {
         _context.Customers.Add(customer);
+        _context.SaveChanges();
     }
 
     public void Delete(Customer customer)

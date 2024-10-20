@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AspNETProj.DatabaseContext;
 using Microsoft.AspNetCore.Builder;
+using AspNETProj.Services;
+using AspNETProj.Repositories;
 
 
 
@@ -14,7 +16,7 @@ builder.Services.AddDbContext<Context>(
     {
         option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
     });
-
+builder.Services.AddScoped<CustomerRepository>();
 
 
 // Add services to the container.

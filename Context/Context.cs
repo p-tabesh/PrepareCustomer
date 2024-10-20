@@ -6,10 +6,8 @@ namespace AspNETProj.DatabaseContext;
 public class Context : DbContext
 {
     public Context(DbContextOptions<Context> options) : base(options) { }
-    public Context() { }
 
     public DbSet<Customer> Customers { get; set; }
-    
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

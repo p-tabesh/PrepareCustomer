@@ -1,7 +1,9 @@
-﻿using AspNETProj.Entities;
+﻿using AspNETProj.DatabaseContext;
+using AspNETProj.Entities;
 using AspNETProj.Models;
 using AspNETProj.Repositories;
 using AspNETProj.Utilities;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace AspNETProj.Services;
@@ -10,11 +12,11 @@ public class CreateCustomer
 {
     private Customer _customer;
     private Phone _phone;
-    private CustomerPhoneRepository _customerPhoneRepository;
     private CustomerRepository _customerRepository;
-    public CreateCustomer(string nationalCode, string phoneNumber)
+    private readonly Context _context;
+    public CreateCustomer(string nationalCode, string phoneNumber, Context context)
     {
-        if (String.IsNullOrEmpty(nationalCode) || nationalCode.Length < 10 || nationalCode.Length > 10)
+        if (String.IsNullOrEmpty(nationalCode) || nationalCode.Length != 10)
         {
             throw new Exception("NationalCode format is invalid.");
         }
@@ -22,18 +24,10 @@ public class CreateCustomer
         {
             throw new Exception("phone must have value");
         }
+        _context = context;
         _customer = new Customer(nationalCode);
-        _phone = new Phone(phoneNumber, _customer);
-        try
-        {
-            var customerRepo = _customerRepository;
-            customerRepo.Add(_customer);
-            var phoneRepo = _customerPhoneRepository;
-            phoneRepo.Add(_phone);
-        }
-        catch (Exception e)
-        {
-            throw new Exception(e.Message);
-        }
+        _customerRepository = new CustomerRepository(_context);
+        _customerRepository.Add(_customer);
+
     }
 }

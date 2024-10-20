@@ -1,4 +1,6 @@
 ﻿using AspNETProj.Utilities;
+
+
 namespace AspNETProj.Models;
 
 public class CustomerModel

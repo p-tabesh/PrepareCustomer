@@ -14,12 +14,11 @@ public class CustomerConfiguration: IEntityTypeConfiguration<Customer>
         builder.Property(c => c.NationalCode)
         .IsRequired()
         .HasMaxLength(10);
-
+        builder.HasIndex(c => c.NationalCode).IsUnique();
         builder.HasMany<Phone>(c => c.Phones)
         .WithOne(ph => ph.customer)
         .HasForeignKey(f => f.CustomerId)
         .OnDelete(DeleteBehavior.Cascade);
-        
     }
 }
 
@@ -33,5 +32,6 @@ public class PhoneConfiguration : IEntityTypeConfiguration<Phone>
         builder.HasOne<Customer>(g => g.customer)
         .WithMany(g => g.Phones)
         .HasForeignKey(f => f.CustomerId);
+        builder.HasIndex(c => c.Value).IsUnique();
     }
 }

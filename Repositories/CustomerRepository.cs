@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Security.Cryptography.X509Certificates;
 using AspNETProj.DatabaseContext;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http.HttpResults;
 namespace AspNETProj.Repositories;
 
 public class CustomerRepository : ICustomerRepository
@@ -24,12 +25,13 @@ public class CustomerRepository : ICustomerRepository
         throw new NotImplementedException();
     }
 
-    public List<Customer> Get(int id)
+    public Customer Get(int id)
     {
-        throw new NotImplementedException();
+        var customer = _context.Customers.FirstOrDefault(x => x.Id == id);
+        return customer ?? throw new Exception("Customer Not Found");
     }
 
-    public IEnumerable<Customer> Get()
+    public List<Customer> Get()
     {
         throw new NotImplementedException();
     }
@@ -47,30 +49,3 @@ public class CustomerRepository : ICustomerRepository
 
 
 
-public class CustomerPhoneRepository : IPhoneRepository
-{
-    public void Add(Phone phone)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void Delete(Phone phone)
-    {
-        throw new NotImplementedException();
-    }
-
-    public List<Phone> Get(int id)
-    {
-        throw new NotImplementedException();
-    }
-
-    public IEnumerable<Phone> Get()
-    {
-        throw new NotImplementedException();
-    }
-
-    public void Remove(Phone phone)
-    {
-        throw new NotImplementedException();
-    }
-}

@@ -23,25 +23,23 @@ public class PrepareCustomer: Controller
     [HttpPost]
     [AllowAnonymous]
     [Route("/api/Register")]
-    public IActionResult Register([FromBody] CustomerModel model)
+    public IActionResult Register(CustomerModel model)
     {
         try
         {
-            var createCustomer = new CreateCustomer(model.nationalCode, model.phoneNumber, _context);
+            var createCustomer = new CreateCustomerService(model.nationalCode, model.phoneNumber, _context);
             return Ok("Customer Added");
         }
         catch (Exception e)
         {
             return BadRequest(e.Message);
         }
-        
     }
     [HttpGet]
     [Route("/api/GetCustomer")]
     public IActionResult GetCustomer(int id)
     {
         throw new NotImplementedException();
-        
     }
 
     public IActionResult GetAllCustomers()
@@ -50,4 +48,19 @@ public class PrepareCustomer: Controller
     }
 
 
+    [HttpPost]
+    [Route("/api/addPhone")]
+    public IActionResult AddPhone(string phoneNumber, int customerId) 
+    {
+        try
+        {
+            var addPhone = new AddPhoneService(phoneNumber, customerId, _context);
+            return Ok("Phone Number Added");
+        }
+        catch (Exception ex)
+        {
+
+            return BadRequest(ex.Message);
+        }
+    }
 }

@@ -7,6 +7,7 @@ public class Phone
     public int CustomerId { get; private set; }
     public Customer customer { get; private set;}
     public DateTime CreationDate { get; private set; }
+    public bool IsDeleted { get; private set; }
     public Phone() {} // EF CORE
     public Phone(string phoneNumber, Customer customer)
     {
@@ -20,6 +21,4 @@ public class Phone
         this.customer = customer;
         CreationDate = DateTime.Now;
     }
-    
-
 }

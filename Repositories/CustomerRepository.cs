@@ -20,9 +20,10 @@ public class CustomerRepository : ICustomerRepository
         _context.SaveChanges();
     }
 
-    public void Delete(Customer customer)
+    public void Remove(Customer customer)
     {
-        throw new NotImplementedException();
+        _context.Customers.Remove(customer);
+        _context.SaveChanges();
     }
 
     public Customer Get(int id)
@@ -33,15 +34,11 @@ public class CustomerRepository : ICustomerRepository
 
     public List<Customer> Get()
     {
-        throw new NotImplementedException();
+        var customers = _context.Customers.ToList();
+        return customers;
     }
 
-    public void Remove(Customer customer)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void Update(Customer customer, string newPhoneNumber)
+    public void Delete(Customer customer)
     {
         throw new NotImplementedException();
     }

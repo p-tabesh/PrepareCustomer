@@ -591,3 +591,5 @@ C:\Users\p.tabesh\Desktop\PrepareCustomer\obj\Debug\net8.0\refint\AspNETProj.dll
 C:\Users\p.tabesh\Desktop\PrepareCustomer\obj\Debug\net8.0\AspNETProj.pdb
 C:\Users\p.tabesh\Desktop\PrepareCustomer\obj\Debug\net8.0\AspNETProj.genruntimeconfig.cache
 C:\Users\p.tabesh\Desktop\PrepareCustomer\obj\Debug\net8.0\ref\AspNETProj.dll
+C:\Users\p.tabesh\Desktop\PrepareCustomer\bin\Debug\net8.0\EntityFramework.Exceptions.Common.dll
+C:\Users\p.tabesh\Desktop\PrepareCustomer\bin\Debug\net8.0\EntityFramework.Exceptions.SqlServer.dll

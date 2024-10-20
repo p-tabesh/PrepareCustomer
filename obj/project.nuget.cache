@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "R7mYhxSo8QF4u8111fUXw7GSIrrpUxN90YiaHOCB6DG056/Ayrk3RsVll6lbTAtW7sXBNmzYf36lbS6pMCnQ3g==",
+  "dgSpecHash": "osI5B1VI/Y/Fo94pFnjWGYC722XBHeAkx1rXzwj4NBz5jc6r19Uya5MJwPW3q7MJVZ0/3wplaN4WNF56t869VA==",
   "success": true,
   "projectFilePath": "C:\\Users\\p.tabesh\\Desktop\\PrepareCustomer\\AspNETProj.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\p.tabesh\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\p.tabesh\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\p.tabesh\\.nuget\\packages\\entityframeworkcore.exceptions.common\\8.1.3\\entityframeworkcore.exceptions.common.8.1.3.nupkg.sha512",
+    "C:\\Users\\p.tabesh\\.nuget\\packages\\entityframeworkcore.exceptions.sqlserver\\8.1.3\\entityframeworkcore.exceptions.sqlserver.8.1.3.nupkg.sha512",
     "C:\\Users\\p.tabesh\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\p.tabesh\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.1.0\\microsoft.aspnetcore.mvc.versioning.5.1.0.nupkg.sha512",
     "C:\\Users\\p.tabesh\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
@@ -88,12 +90,5 @@
     "C:\\Users\\p.tabesh\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\p.tabesh\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\p.tabesh\\Desktop\\PrepareCustomer\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

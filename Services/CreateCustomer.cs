@@ -46,14 +46,17 @@ public class AddPhoneService
 
     public AddPhoneService(string phoneNumber, int customerId, Context context)
     {
-        if(!Validation.PhoneValidation(phoneNumber))
+        _context = context;
+        _phoneRepository = new PhoneRepository(_context);
+
+        if (!Validation.PhoneValidation(phoneNumber))
         {
             throw new Exception("Phone format is invalid.");
         }
-        _context = context;
+
         _customerRepository = new CustomerRepository(_context);
-        _phoneRepository = new PhoneRepository(_context);
         _customer = _customerRepository.Get(customerId);
+
         _phone = new Phone(phoneNumber, _customer);
         _phoneRepository.Add(_phone);
     }

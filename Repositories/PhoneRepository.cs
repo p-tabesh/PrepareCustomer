@@ -1,6 +1,8 @@
 ﻿using AspNETProj.Entities;
 using AspNETProj.IRepositories;
 using AspNETProj.DatabaseContext;
+using System.Data;
+using EntityFramework.Exceptions.Common;
 namespace AspNETProj.Repositories
 {
     public class PhoneRepository : IPhoneRepository
@@ -12,12 +14,21 @@ namespace AspNETProj.Repositories
         }
         public void Add(Phone phone)
         {
-            _context.Phones.Add(phone);
-            _context.SaveChanges();
+            try
+            {
+                _context.Phones.Add(phone);
+                _context.SaveChanges();
+            }
+            catch (Exception)
+            {
+                throw new Exception("Phone Number Already Exists");
+            }
+            
         }
         public Phone Get(string phoneNumber)
         {
-            throw new NotImplementedException();
+            var phone = _context.Phones.FirstOrDefault(p => p.Value == phoneNumber);
+            return phone;
         }
         public List<Phone> Get() 
         {

@@ -53,4 +53,25 @@ public class PhoneServices
         _phoneRepository.Add(phone);
         // کلا سرویس هارو فانکشنی کنم یا تو کانستراکتور اوکی کنم؟
     }
+
+    public void RemovePhone(string phoneNumber, int customerId)
+    {
+        if (!PhoneValidation.IsValid(phoneNumber))
+        {
+            throw new ArgumentException("phone number format is invalid");
+        }
+
+        var phone = _phoneRepository.Get(phoneNumber);
+
+        if (phone == null)
+        {
+            throw new Exception("phone number doesnt exists");
+        }
+        if (phone.CustomerId != customerId)
+        {
+            throw new Exception("phone doesnt belong to this customer");
+        }
+        _phoneRepository.Remove(phone);
+        //_phoneRepository.Delete(phoneNumber, customerId);
+    }
 }

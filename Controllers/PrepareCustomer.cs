@@ -80,4 +80,19 @@ public class PrepareCustomer: Controller
             return BadRequest(ex.Message);
         }
     }
+    [HttpPost]
+    [Route("/api/deletePhone")]
+    public IActionResult DeletePhone(string phoneNumber, int customerId)
+    {
+        try
+        {
+            var phoneServices = new PhoneServices(_context);
+            phoneServices.RemovePhone(phoneNumber, customerId);
+            return Ok("Phone number Deleted");
+        }
+        catch(Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+    }
 }

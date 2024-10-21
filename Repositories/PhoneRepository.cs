@@ -44,6 +44,17 @@ namespace AspNETProj.Repositories
             // بخاطر بررسی وجود داشتن نیو ولیو باید وجودشو اول چک کنم فکر کنم
         }
 
+        public void Remove(Phone phone)
+        {
+            _context.Phones.Remove(phone);
+            _context.SaveChanges();
+        }
         
+        public void Delete(string phoneNumber, int customerId) 
+        {
+            var phone = _context.Phones.FirstOrDefault(t => t.Value == phoneNumber && t.CustomerId == customerId);
+            phone.IsDeleted = true;
+            _context.SaveChanges();
+        }
     }
 }

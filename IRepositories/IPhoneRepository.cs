@@ -8,5 +8,6 @@ namespace AspNETProj.IRepositories
         public Phone Get(string phoneNumber);
         public List<Phone> Get();
         public void Update(int oldValueId, string newValue, int CustomerId);
+        public void Remove(Phone phone);
     }
 }

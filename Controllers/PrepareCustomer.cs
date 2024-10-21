@@ -63,4 +63,21 @@ public class PrepareCustomer: Controller
             return BadRequest(ex.Message);
         }
     }
+
+    [HttpPost]
+    [Route("/api/updatePhone")]
+    public IActionResult UpdatePhone(string oldValue, string newValue, int customerId)
+    {
+        try
+        {
+            var updatePhone = new UpdatePhoneService(_context);
+            updatePhone.UpdatePhone(oldValue, newValue, customerId);
+            return Ok("phone number updated");
+        }
+        catch (Exception ex)
+        {
+
+            return BadRequest(ex.Message);
+        }
+    }
 }

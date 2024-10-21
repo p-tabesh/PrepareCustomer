@@ -34,5 +34,16 @@ namespace AspNETProj.Repositories
         {
             throw new NotImplementedException();
         }
+
+        public void Update(int oldValueId, string newValue, int CustomerId)
+        {
+            var phone = _context.Phones.FirstOrDefault(t => t.Id == oldValueId && t.CustomerId == CustomerId);            
+            phone.Value = newValue;
+            _context.SaveChanges();
+            // نمیدونم باید اینجا عدم وجودشو چک کنه و خطا بده یا تو همون گت بفهمه
+            // بخاطر بررسی وجود داشتن نیو ولیو باید وجودشو اول چک کنم فکر کنم
+        }
+
+        
     }
 }

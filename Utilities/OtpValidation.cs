@@ -9,14 +9,4 @@ public static class Validation
         
         return false;
     }
-
-    public static bool PhoneValidation(string phoneNumber)
-    {
-        if (!string.IsNullOrEmpty(phoneNumber) && phoneNumber.Length == 11 && phoneNumber.StartsWith("09"))
-        {
-            return true;
-        }
-        return false;
-
-    }
 }
